@@ -1,0 +1,46 @@
+{
+  "name": "glazed-donut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "8.8.1",
+    "npm": "5.0.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix app",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix app",
+    "build-prod": "npm run build-prod --prefix app",
+    "heroku-postbuild": "npm i --prefix app && npm run build-prod --prefix app",
+    "test": "npm run test --prefix app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Navib/glazed-donut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Navib/glazed-donut/issues"
+  },
+  "homepage": "https://github.com/Navib/glazed-donut#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "mongoose": "^5.4.9",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "redux-promise": "^0.6.0"
+  }
+}

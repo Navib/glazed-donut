@@ -1,0 +1,14 @@
+/* Flex Classes */
+
+.flex {
+  display: flex;
+}
+
+/* Flex Row Center */
+:global(.frc) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
